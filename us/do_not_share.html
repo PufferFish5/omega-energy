@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-Ua_Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="../media/omegaCIAlogo.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/do_not_share_style.css"> 
+
+    <title>Omega Energy</title>
+    <script src="../js/nav_bar.js"></script>
+    <script src="../js/background.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/contact_form.js"></script>
+
+</head>
+<body>
+    <div id="main-nav"></div>
+    <div id="background"></div>
+    <main class="main-content-container">
+        <div class="text-container">
+            <h2>Do not share my personal information</h2>
+            <p>At Omega Energy Company, we deeply value your privacy and are committed to protecting your personal information. We understand that in today's digital landscape, concerns about the unintentional or unauthorized use of personal data are significant.
+    
+                    While we strive to safeguard your information and only use it in ways that are transparent and benefit your experience with Omega Energy, we recognize that you may have concerns or believe your personal data has been used in a manner you did not consent to.
+                    
+                    If you believe that Omega Energy Company has sold or shared your personal information without your authorization, please inform us by completing the form below. This will allow us to investigate your inquiry and take appropriate action.
+            </p>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+            <h3>Your Information</h3>
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <button type="button" id="nextBtn" class="btn">Send</button>
+
+            <div id="validationError" class="error-message" style="display: none;">Please fill out all required fields.</div>
+            <div id="submissionMessage" class="success-message" style="display: none;"></div>
+        </form>
+    </main>
+    <div id="footer"></div>
+
+</body>
+</html>

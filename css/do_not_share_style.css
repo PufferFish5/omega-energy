@@ -1,0 +1,142 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-content-container {
+    background: rgb(14, 14, 14); 
+    box-shadow:  0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+    margin-top: 200px;
+    margin-bottom: 150px;
+    padding: 30px 50px;
+    position: relative;
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center;
+    z-index: 1;
+    border-radius: 10px;
+    transform: skewY(-5deg);
+}
+
+.text-container, .contact-form {
+    transform: skewY(5deg);
+    padding: 30px;
+    flex:1;
+}
+.text-container {
+    border-right: 1px solid #333;
+    font-size: 20px;
+}
+h2 {
+    color: #b700ff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 30px;
+}
+
+.contact-option-btn {
+    background-color: #121212;
+    color: #fff;
+    border: none;
+    border-bottom: 1px dashed #333;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.contact-option-btn:hover {
+    background-color: #b700ff;
+}
+
+.contact-form h3 {
+    color: #b700ff; 
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #eee;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.btn {
+    background-color: #b700ff;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #e04dff;
+}
+
+#contactInfo {
+    margin-top: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.info-item i {
+    font-size: 1.5em;
+    color: #00bfff;
+    margin-right: 10px;
+}
+
+.contact-value {
+    font-weight: bold;
+    color: #eee;
+}
+
+.error-message {
+    color: #ff4d4d;
+    margin-top: 10px;
+    text-align: center;
+}
+.success-message {
+    color: #626262;
+    margin-top: 10px;
+    text-align: center;
+}

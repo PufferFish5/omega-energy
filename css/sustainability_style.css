@@ -1,0 +1,287 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.headline{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: -110px;
+}
+.headline .headline-text{
+    position: relative;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 45px;
+    transform: scale(2);
+    padding: 30px;
+    letter-spacing: 2px;
+}
+.headline .headline-text:before,
+.headline .headline-text:after {
+    padding: 30px;
+    color: white;
+    content: attr(data-text);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    overflow: hidden;
+    top: 0;
+}
+.headline .headline-text:before{
+    left: 3px;
+    text-shadow: -2px 0 red;
+    animation: glitch-1 10s linear infinite reverse;
+}
+.headline .headline-text:after{
+    left: -3px;
+    text-shadow: -2px 0 blue;
+    animation: glitch-2 10s linear infinite reverse;
+}
+@keyframes glitch-1 {
+    0% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        visibility: visible; 
+    }
+    2% {
+        clip-path: polygon(0 82%, 100% 82%, 100% 100%, 0 100%);
+        visibility: visible;
+    }
+    4% {
+        clip-path: polygon(0 55%, 100% 55%, 100% 70%, 0 70%);
+        visibility: visible;
+    }
+    6% {
+        clip-path: polygon(0 20%, 100% 20%, 100% 40%, 0 40%);
+        visibility: visible;
+    }
+    8% {
+        clip-path: polygon(0 0, 100% 0, 100% 15%, 0 15%);
+        visibility: visible;
+    }
+    10% {
+        clip-path: polygon(0 75%, 100% 75%, 100% 90%, 0 90%);
+        visibility: visible;
+    }
+    12% {
+        clip-path: polygon(0 10%, 100% 10%, 100% 25%, 0 25%);
+        visibility: visible;
+    }
+    14% {
+        clip-path: polygon(0 60%, 100% 60%, 100% 85%, 0 85%);
+        visibility: visible;
+    }
+    16% {
+        clip-path: polygon(0 30%, 100% 30%, 100% 50%, 0 50%);
+        visibility: visible;
+    }
+    18% {
+        clip-path: polygon(0 45%, 100% 45%, 100% 65%, 0 65%);
+        visibility: visible;
+    }
+    20% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        visibility: visible; 
+    }
+    21%, 99.99% {
+        visibility: hidden;
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        visibility: visible; 
+    }
+}
+@keyframes glitch-2 {
+    0% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        visibility: visible; 
+    }
+    2% {
+        clip-path: polygon(0 40%, 100% 40%, 100% 55%, 0 55%);
+        visibility: visible;
+    }
+    4% {
+        clip-path: polygon(0 65%, 100% 65%, 100% 80%, 0 80%);
+        visibility: visible;
+    }
+    6% {
+        clip-path: polygon(0 15%, 100% 15%, 100% 35%, 0 35%);
+        visibility: visible;
+    }
+    8% {
+        clip-path: polygon(0 80%, 100% 80%, 100% 95%, 0 95%);
+        visibility: visible;
+    }
+    10% {
+        clip-path: polygon(0 5%, 100% 5%, 100% 20%, 0 20%);
+        visibility: visible;
+    }
+    12% {
+        clip-path: polygon(0 70%, 100% 70%, 100% 85%, 0 85%);
+        visibility: visible;
+    }
+    14% {
+        clip-path: polygon(0 25%, 100% 25%, 100% 45%, 0 45%);
+        visibility: visible;
+    }
+    16% {
+        clip-path: polygon(0 50%, 100% 50%, 100% 75%, 0 75%);
+        visibility: visible;
+    }
+    18% {
+        clip-path: polygon(0 5%, 100% 5%, 100% 20%, 0 20%);
+        visibility: visible;
+    }
+    20% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        visibility: visible; 
+    }
+    21%, 99.99% { 
+        visibility: hidden;
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        visibility: visible; 
+    }
+}
+.main-content {
+    background-color: #121212;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    position: relative;
+    transform: skewY(-5deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.environmental-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border: 4px solid transparent;
+    border-radius: 8px;
+    width: 70%;
+    transform: skewY(5deg);
+    padding: 40px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; 
+
+}
+.environmental-section::before {
+    content: ""; 
+    position: absolute; 
+    top: 90px;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    background-image: url("../media/sustain_back.png"); 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover; 
+
+    z-index: -1; 
+}
+.environmental-section::after {
+    content: ""; 
+    position: absolute; 
+    top: -1.5%;
+    left: -1.5%;
+    width: 103%;
+    height: 103%;
+    box-shadow: -10px 0 20px rgb(183, 0, 255), 10px 0 20px rgb(0, 200, 255);
+    border-image: linear-gradient(to right, rgb(183, 0, 255), rgb(0, 200, 255)) 1;
+    border: 4px solid transparent;
+    border-radius: 4px;
+    z-index: -2;
+}
+
+.environmental-section > .intro,
+.environmental-section > .examples {
+    position: relative; 
+    z-index: 1; 
+}
+
+.intro {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    top:-50px;
+    position: absolute;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.example {
+    margin-bottom: 40px; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; 
+    align-items: center; 
+
+}
+
+.examples .example:last-child {
+    margin-bottom: 0;
+}
+
+.text-column {
+    padding: 20px;
+    background-color: #121212;
+    width: 100%;
+    height: 100%;
+}
+
+.image-column {
+     width: 100%;
+}
+
+.text-column h3 {
+    font-family: 'Exo 2', sans-serif ;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: inherit;
+}
+
+.text-column p {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: inherit; 
+}
+
+
+.example-image {
+    display: block; 
+    max-width: 100%; 
+    height: auto;
+    object-fit: cover; 
+    border-radius: 8px; 
+}
+
+
+.example:nth-child(odd) .text-column { 
+    order: 1; 
+    margin-right: 0;
+    margin-left: 0;
+}
+.example:nth-child(odd) .image-column { 
+    order: 2; 
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.example:nth-child(even) .text-column { 
+    order: 2; 
+    margin-left: 0; 
+    margin-right: 0;
+}
+.example:nth-child(even) .image-column {
+    order: 1; 
+    margin-right: 0;
+    margin-left: 0;
+}

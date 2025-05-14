@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-Ua_Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="../media/omegaCIAlogo.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/do_not_share_style.css">
+
+    <title>Omega Energy</title>
+    <script src="../js/nav_bar.js" defer></script>
+    <script src="../js/background.js" defer></script>
+    <script src="../js/footer.js" defer></script>
+    <script src="../js/contact_form.js" defer></script>
+
+</head>
+<body>
+    <div id="main-nav"></div>
+    <div id="background"></div>
+    <main class="main-content-container">
+        <div class="text-container">
+            <h2>Не поширювати мою особисту інформацію</h2>
+            <p>В Omega Energy Company ми глибоко цінуємо вашу конфіденційність і прагнемо захищати вашу особисту інформацію. Ми розуміємо, що в сучасному цифровому світі занепокоєння щодо ненавмисного або несанкціонованого використання персональних даних є значними.
+
+                    Хоча ми докладаємо зусиль для захисту вашої інформації та використовуємо її лише прозорими способами, які приносять користь вашому досвіду взаємодії з Omega Energy, ми визнаємо, що у вас можуть виникнути запитання або ви можете вважати, що ваші особисті дані були використані без вашої згоди.
+
+                    Якщо ви вважаєте, що Omega Energy Company продала або поширила вашу особисту інформацію без вашого дозволу, будь ласка, повідомте нас, заповнивши форму нижче. Це дозволить нам розслідувати ваше запитання та вжити відповідних заходів.
+            </p>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+            <h3>Ваша інформація</h3>
+            <div class="form-group">
+                <label for="firstName">Ім'я:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Прізвище:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Номер телефону:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Електронна пошта:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Місцезнаходження:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <button type="button" id="nextBtn" class="btn">Надіслати</button>
+
+            <div id="validationError" class="error-message" style="display: none;">Будь ласка, заповніть усі обов'язкові поля.</div>
+            <div id="submissionMessage" class="success-message" style="display: none;"></div>
+        </form>
+    </main>
+    <div id="footer"></div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/nav_style.css">
+    <style>
+        .nav-links {
+            font-family: "Press Start 2P", system-ui;
+            font-size: 20px;
+            align-items: flex-start;
+        }
+        .nav-link {
+            width: 150px;
+            bottom: 25px;
+        }
+        .nav-offer-link {
+            width: 200px;
+            margin-right: 150px;
+        }
+        .condition {
+            background-image: linear-gradient(to bottom, #FFD700 40%, #FF1493 90%, #0b070b 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-navigation">
+        <div class="brand-area">
+            <a href="index.html" class="brand-img-link"><img src="../media/navbar_logo.png" alt="Логотип" class="brand-img"></a>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <div class="a-container">
+                    <a href="series1_drink1.html" class="nav-offer-link nav-link">
+                        <span class="condition"> Нова акція</span><br>
+                        <span class="condition"><i class="fa-solid fa-play fa-2xs"></i> Нова акція</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="a-container">
+                    <a href="index.html" class="nav-link">
+                        <span class="condition">Головна</span><br>
+                        <span class="condition"><i class="fa-solid fa-play fa-2xs"></i> Головна</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="a-container">
+                    <a href="shop.html" class="nav-link">
+                        <span class="condition">Магазин</span><br>
+                        <span class="condition"><i class="fa-solid fa-play fa-2xs"></i> Магазин</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="a-container">
+                    <a href="news.html" class="nav-link">
+                        <span class="condition">Новини</span><br>
+                        <span class="condition"><i class="fa-solid fa-play fa-2xs"></i> Новини</span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <div class="lang-button-container">
+            <a href="../us/index.html" class="lang-button" data-lang="us"><i class="fas fa-globe"></i><span>UA</span></a>
+        </div>
+    </nav>
+    <script src="../js/lang_switch.js" defer></script>
+</body>
+</html>
