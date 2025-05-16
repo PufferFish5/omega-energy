@@ -68,7 +68,7 @@
                 </div>
             </div>
 
-            <form id="contactForm" class="contact-form" style="display: none;">
+            <form id="contactForm" class="contact-form" style="display: none;" action="https://api.web3forms.com/submit">
                 <h3>Your Information</h3>
                 <div class="form-group">
                     <label for="firstName">First Name:</label>
@@ -100,6 +100,7 @@
                     <button type="submit" class="btn">Submit</button>
                 </div>
                 <div id="validationError" class="error-message" style="display: none;">Please fill out all required fields.</div>
+                <input type="hidden" name="apikey" value="f548e0b4-9ca7-4b49-8580-b335e7e0b38f">
             </form>
         </div>
     </main>
