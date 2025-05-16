@@ -181,69 +181,83 @@
 .hero-section {
     position: relative;
     width: 100%;
-    height: 700px; 
+    height: auto; 
     overflow: hidden;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: flex-end; 
 }
 
-.hero-video {
-    position: absolute;
-    top: 160px;
+.hero-image {
+    position: relative;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
-.hero-text-container {
+.buy-collab-button {
     position: absolute;
-    bottom: 0;
+    width: 12%;
+    height: auto;
+    top:19.5vh;
+    left:6.5vh;
+}
+.hero-image-link {
+    position:relative;
+    top: 0;
     left: 0;
     width: 100%;
-    padding: 50px;
-    text-align: center;
-    color: #fff;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%); 
-    padding-top: 280px; 
-
+    height: 100%;
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.hero-image-link:hover {
+    filter: drop-shadow(0 0 10px #ffb338);
 }
 
-.hero-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 5px #000;
-    color: #ff77ff;
-    text-shadow: 0 0 10px #ff77ff, 0 0 20px #ff77ff, 0 0 30px #ff77ff;
-    transform: skewY(5deg);
+:root {
+    --gold: #ffb338;
+    --light-shadow: #77571d;
+    --dark-shadow: #3e2904;
+}
+
+.wrapper {
     position: absolute;
-    top: 20px;
-
+    top:3%;
+    left:23%;
+    display: grid;
+    grid-template-areas: 'overlap';
+    justify-items: flex-start;
 }
-
-.hero-description {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    text-shadow: 1px 1px 3px #000;
-    transform: skewY(5deg);
+.wrapper > div {
+    background-clip: text;  
+    -webkit-background-clip: text;
+    color: #363833;
+    font-family: 'Teko', sans-serif;
+    font-weight: 900;
+    font-size: 4vw;
+    grid-area: overlap;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 4px transparent;
 }
-
-.hero-video::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 200px; 
-    /*background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%); */
-    pointer-events: none; 
-
+div.bg {
+    background-image: repeating-linear-gradient( 105deg, 
+        var(--gold) 0% , 
+        var(--dark-shadow) 5%,
+        var(--gold) 12%);
+    color: transparent;
+    filter: drop-shadow(5px 15px 15px black);
+    transform: scaleY(1.05);
+    transform-origin: top;
 }
-
-.btn {
-    padding: auto;
+div.fg{
+    background-image: repeating-linear-gradient( 5deg,  
+        var(--gold) 0% , 
+        var(--light-shadow) 23%, 
+        var(--gold) 31%);
+    color: #1e2127;
+    transform: scale(1);
 }
 
 .news-feed {
