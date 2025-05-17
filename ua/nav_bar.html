@@ -10,70 +10,93 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/nav_style.css">
     <style>
-        .nav-links {
+        .nav-offer-container, .nav-links {
             font-family: "Press Start 2P", system-ui;
             font-size: 20px;
-            align-items: flex-start;
         }
-        .nav-link {
-            width: 150px;
-            bottom: 25px;
-        }
-        .nav-offer-link {
-            width: 200px;
-            margin-right: 150px;
-        }
+
         .condition {
             background-image: linear-gradient(to bottom, #FFD700 40%, #FF1493 90%, #0b070b 100%);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
+        .nav-links{
+            transform: translateY(60%);
+        }
+        .a-container {
+            min-width: 200px;
+        }
+        .nav-link {
+            width: 150px; 
+
+        } 
+        .nav-offer-link{
+            width: 250px; 
+            transform: translateY(55%);
+
+        }   
+        .nav-offer-link span:first-of-type{
+            transform: translateY(100%) ;
+        } 
+        .nav-offer-link:hover span:first-of-type,
+        .nav-offer-link.active span:first-of-type {
+        transform: translateY(-100%) ;
+        }
+        .nav-link:hover span:last-of-type,
+        .nav-link.active span:last-of-type {
+            transform: translateY(-100%) translateX(-13%);
+        }
     </style>
 </head>
 <body>
     <nav class="main-navigation">
         <div class="brand-area">
-            <a href="index.html" class="brand-img-link"><img src="../media/navbar_logo.png" alt="Логотип" class="brand-img"></a>
+            <a href="index.html" class="brand-img-link">
+                <img src="../media/navbar_logo.png" alt="Logo" class="brand-img">
+            </a>
         </div>
+
+        <div class="a-container nav-offer-container">
+            <a href="series1_drink1.html" class="nav-link nav-offer-link">
+                <span class="condition"> ЗАРЯД СВАГИ</span><br>
+                <span class="condition"><i class="fa-solid fa-play fa-2xs"></i> ЗАРЯД СВАГИ</span>
+            </a>
+        </div>
+
         <ul class="nav-links">
             <li>
                 <div class="a-container">
-                    <a href="series1_drink1.html" class="nav-offer-link nav-link">
-                        <span class="condition"> Нова акція</span><br>
-                        <span class="condition"><i class="fa-solid fa-play fa-2xs"></i> Нова акція</span>
-                    </a>
-                </div>
-            </li>
-            <li>
-                <div class="a-container">
                     <a href="index.html" class="nav-link">
-                        <span class="condition">Головна</span><br>
-                        <span class="condition"><i class="fa-solid fa-play fa-2xs"></i> Головна</span>
+                        <span class="condition">ГОЛОВНА</span><br>
+                        <span class="condition"><i class="fa-solid fa-play fa-2xs"></i> ГОЛОВНА</span>
                     </a>
                 </div>
             </li>
             <li>
                 <div class="a-container">
                     <a href="shop.html" class="nav-link">
-                        <span class="condition">Магазин</span><br>
-                        <span class="condition"><i class="fa-solid fa-play fa-2xs"></i> Магазин</span>
+                        <span class="condition">МАГАЗИН</span><br>
+                        <span class="condition"><i class="fa-solid fa-play fa-2xs"></i> МАГАЗИН</span>
                     </a>
                 </div>
             </li>
             <li>
                 <div class="a-container">
                     <a href="news.html" class="nav-link">
-                        <span class="condition">Новини</span><br>
-                        <span class="condition"><i class="fa-solid fa-play fa-2xs"></i> Новини</span>
+                        <span class="condition">НОВИНИ</span><br>
+                        <span class="condition"><i class="fa-solid fa-play fa-2xs"></i> НОВИНИ</span>
                     </a>
                 </div>
             </li>
         </ul>
+
         <div class="lang-button-container">
-            <a href="../us/index.html" class="lang-button" data-lang="us"><i class="fas fa-globe"></i><span>UA</span></a>
+            <a href="../us/index.html" class="lang-button" data-lang="ua">
+                <i class="fas fa-globe"></i><span>UA</span>
+            </a>
         </div>
     </nav>
-    <script src="../js/lang_switch.js" defer></script>
-</body>
+
+    </body>
 </html>
