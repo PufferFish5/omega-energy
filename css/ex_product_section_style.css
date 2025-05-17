@@ -226,6 +226,7 @@ div.fg{
 }
 
 .code-input-form {
+    width:30%;
     display: flex;
     flex-direction: column;
     gap: 15px;
