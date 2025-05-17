@@ -1,0 +1,383 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.main-content-container {
+    background: rgb(14, 14, 14); 
+    box-shadow:  0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+    margin-top: 200px;
+    margin-bottom: 150px;
+    padding: 30px 0;
+    position: relative;
+    display: flex; 
+    overflow: hidden;
+    flex-direction: column; 
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.main-content-container section {
+    width: 100%;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    position: relative; /* Requested position for sections */
+    margin-bottom: 40px; /* Space between sections */
+}
+
+.main-content-container section:last-child {
+    margin-bottom: 100px; /* No margin after the last section */
+}
+
+.section-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 3em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #00ffff; /* Example neon color */
+    text-shadow: 0 0 7px #00ffff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.divider {
+    position: relative; 
+    height: 3px; 
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    background: linear-gradient(to right,
+        rgb(183, 0, 255), 
+        rgb(0, 200, 255) 
+    );
+    box-shadow: 0 0 8px rgb(183, 0, 255),  
+                0 0 15px rgb(0, 200, 255), 
+                0 0 25px rgb(183, 0, 255), 
+                0 0 35px rgb(0, 200, 255); 
+}
+.divider:first-of-type {
+    margin-top: 15px;
+    width: 90%;
+}
+
+/* --- Block 1: Hero Section --- */
+/* Hero section might need different styling as it contains the main poster */
+/* Adjust these styles as needed to fit your hero visual */
+.hero-section {
+    position: relative; /* Keep relative or absolute as needed for layout */
+    width: 100%;
+    min-height: 1080px;
+    height: auto; /* Example fixed height for the hero section */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Align content to the bottom */
+    padding: 0; /* Remove padding as content is positioned */
+    margin-bottom: 0; /* No margin below hero section */
+}
+
+.hero-image {
+    position: absolute; /* Position absolutely to cover the section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0; /* Place behind other elements */
+    /* Add gradient mask for fade effect */
+    mask-image: linear-gradient(to bottom, rgba(14, 14, 14,0) 0%, rgba(14, 14, 14,1) 20%, rgba(14, 14, 14,1) 90%, rgba(0, 0, 0,0) 100%);
+   
+}
+:root {
+    --gold: #ffb338;
+    --light-shadow: #77571d;
+    --dark-shadow: #3e2904;
+}
+
+/* --- Wrapper Text Styles (from your code) --- */
+/* Assuming this wrapper is part of the hero section overlay */
+.wrapper {
+    position: absolute; /* Keep relative or absolute as needed for layout */
+    width: 100%;
+    height: auto; /* Example fixed height for the hero section */
+    top:10%;
+    left:50% ;
+
+
+}
+.wrapper > div {
+    position: absolute;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: #363833; /* This color is for the background text layer */
+    font-family: 'Teko', sans-serif;
+    font-weight: 900;
+    font-size: 7vw;
+    grid-area: overlap;
+    letter-spacing: 5px;
+    -webkit-text-stroke: 4px transparent; 
+}
+div.bg {
+    /* Keep the existing background gradient for the background text layer */
+    background-image: repeating-linear-gradient( 105deg,
+        var(--gold) 0% ,
+        var(--dark-shadow) 5%,
+        var(--gold) 12%);
+    color: transparent; /* Background text layer is transparent to show the gradient */
+    filter: drop-shadow(5px 15px 15px black);
+    transform: scaleY(1.05);
+    transform-origin: top;
+}
+div.fg{
+    /* Change the background gradient for the foreground text layer */
+    background-image: linear-gradient(to right, var(--gold), #ff1493); /* Gold to Pink gradient */
+    color: transparent; /* Foreground text layer is transparent to show the gradient */
+    transform: scale(1); /* Keep original scale */
+
+}
+.buy-collab-button {
+    position: absolute; /* Keep absolute to position freely */
+    /* Adjust size and position based on your image and desired hover area */
+    width: 150px; /* Example hover area width */
+    height: 200px; /* Example hover area height */
+    bottom: 50px; /* Example position from bottom */
+    right: 50px; /* Example position from right */
+    z-index: 2;
+    overflow: visible; /* Allow image to extend beyond button bounds */
+    /* Optional: border: 1px dashed red; /* For debugging hover area */
+}
+
+.buy-collab-button:hover{
+    filter: drop-shadow(0 0 15px var(--gold)); /* Gold glow on hover */
+}
+
+
+.swag-charged-description {
+    background-image: linear-gradient(to top, rgba(14, 14, 14, 0.9) 20%, rgba(14, 14, 14, 0.9) 80%, rgba(14, 14, 14, 0) 100%);
+    position: absolute; /* Or absolute */
+    z-index: 1;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: -5%;
+    padding-bottom: 120px;
+    padding-top: 120px;
+}
+
+.drink-name-wrapper {
+    background-image: linear-gradient(to right, var(--gold), #ff1493);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* --- Block 2: Music Track Section --- */
+.music-track-section {
+    width: 100%;
+    padding: 80px 20px; /* More padding */
+    /* transform and position are applied by the general section rule */
+}
+
+.track-content {
+    width: 90%;
+    display: flex;
+    flex-direction: column; /* Stack on small screens */
+    gap: 40px;
+    margin: 0 auto; /* Center content */
+
+}
+
+@media (min-width: 768px) { /* Two columns on larger screens */
+    .track-content {
+        flex-direction: row;
+        align-items: center;
+    }
+    .track-description-block,
+    .track-cover-block {
+        flex: 1; /* Distribute space */
+    }
+}
+
+.track-description-block {
+    font-size: 1.5em;
+    line-height: 1.6;
+}
+
+.album-cover-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+
+/* --- Block 3 & 4: Contest Section --- */
+.contest-section {
+     padding: 80px 20px;
+     width: 100%;
+}
+
+.contest-details {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.5em;
+    line-height: 1.6;
+}
+
+.contest-details p {
+    margin-bottom: 15px;
+}
+
+.contest-region-dates {
+    font-weight: bold;
+    color: #00ffff; /* Neon color */
+    text-shadow: 0 0 1px #00ffff;
+}
+
+.code-input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(30, 30, 30, 0.8);
+    border-radius: 8px;
+}
+
+.code-input-form label {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #eee;
+}
+
+.code-input-form input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #eee;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.code-input-form input[type="text"]:focus {
+    border-color: #ff00ff; /* Change color on focus */
+    box-shadow: 0 0 8px rgba(255, 0, 255, 0.5);
+}
+
+.code-input-form button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    font-family: 'Teko', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #ff00ff; /* Neon purple */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.code-input-form button:hover {
+    background-color: #0084ff; /* Neon blue on hover */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.submission-status {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.prizes-info {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px dashed rgba(255, 255, 255, 0.2);
+}
+
+.prizes-info h3 {
+    text-align: center;
+    color: var(--gold); /* Gold color */
+    text-shadow: 0 0 5px var(--gold);
+    margin-bottom: 20px;
+}
+
+.prizes-info ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.merch-photo {
+    display: block;
+    max-width: 300px; /* Example max width for merch photo */
+    height: auto;
+    margin: 20px auto; /* Center the photo */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+
+/* --- Block 5: Formal Conditions Section --- */
+.condition-section {
+    width: 100%;
+    padding: 80px 20px;
+     /* transform and position are applied by the general section rule */
+}
+
+.conditions-text {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.3em;
+    line-height: 1.7;
+}
+
+.conditions-text p,
+.conditions-text ul {
+    margin-bottom: 15px;
+}
+
+.conditions-text ul {
+    list-style: disc;
+    margin-left: 30px;
+}
+
+.conditions-text strong {
+    color: #00ffff; /* Highlight key terms */
+}
+
+
+/* --- Block 6: Map Section --- */
+.map-section {
+     width: 100%;
+     padding: 80px 20px;
+     margin-bottom: 0; /* No margin after the last section */
+     /* transform and position are applied by the general section rule */
+}
+
+.map-container {
+    width: 32%; /* Limit map width */
+    margin: 0 auto 20px auto; /* Center map and add bottom margin */
+    border: 2px solid #ff00ff; /* Neon border around map */
+    border-radius: 8px;
+    overflow: hidden; /* Hide iframe corners */
+
+}
+
+.map-container iframe {
+    display: block; /* Remove extra space below iframe */
+}
+
+.map-text {
+    text-align: center;
+    font-size: 1em;
+    color: #ccc;
+
+}
+
