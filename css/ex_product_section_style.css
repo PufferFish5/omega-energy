@@ -1,23 +1,22 @@
-
 body, html {
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: 'Roboto', sans-serif;
-
 }
 
 .main-content-container {
-    background: rgb(14, 14, 14); 
-    box-shadow:  0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+    background: rgb(14, 14, 14);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
     margin-top: 200px;
     margin-bottom: 150px;
     padding: 30px 0;
     position: relative;
-    display: flex; 
+    display: flex;
     overflow: hidden;
-    flex-direction: column; 
+    flex-direction: column;
     z-index: 1;
     border-radius: 10px;
 }
@@ -26,12 +25,12 @@ body {
     width: 100%;
     padding: 50px 20px;
     box-sizing: border-box;
-    position: relative; /* Requested position for sections */
-    margin-bottom: 40px; /* Space between sections */
+    position: relative;
+    margin-bottom: 40px;
 }
 
 .main-content-container section:last-child {
-    margin-bottom: 100px; /* No margin after the last section */
+    margin-bottom: 100px;
 }
 
 .section-title {
@@ -39,165 +38,155 @@ body {
     font-size: 3em;
     font-weight: 700;
     text-transform: uppercase;
-    color: #00ffff; /* Example neon color */
+    color: #00ffff;
     text-shadow: 0 0 7px #00ffff;
     text-align: center;
     margin-bottom: 40px;
 }
+
 .divider {
-    position: relative; 
-    height: 3px; 
+    position: relative;
+    height: 3px;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-    
     background: linear-gradient(to right,
-        rgb(183, 0, 255), 
-        rgb(0, 200, 255) 
+        rgb(183, 0, 255),
+        rgb(0, 200, 255)
     );
-    box-shadow: 0 0 8px rgb(183, 0, 255),  
-                0 0 15px rgb(0, 200, 255), 
-                0 0 25px rgb(183, 0, 255), 
-                0 0 35px rgb(0, 200, 255); 
+    box-shadow: 0 0 8px rgb(183, 0, 255),
+                0 0 15px rgb(0, 200, 255),
+                0 0 25px rgb(183, 0, 255),
+                0 0 35px rgb(0, 200, 255);
 }
+
 .divider:first-of-type {
     margin-top: 15px;
     width: 90%;
 }
-
-/* --- Block 1: Hero Section --- */
-/* Hero section might need different styling as it contains the main poster */
-/* Adjust these styles as needed to fit your hero visual */
+/*11111111111*/
 .hero-section {
-    position: relative; /* Keep relative or absolute as needed for layout */
+    position: relative;
     width: 100%;
     min-height: 1080px;
-    height: auto; /* Example fixed height for the hero section */
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end; /* Align content to the bottom */
-    padding: 0; /* Remove padding as content is positioned */
-    margin-bottom: 0; /* No margin below hero section */
+    justify-content: flex-end;
+    padding: 0;
+    margin-bottom: 0;
 }
 
 .hero-image {
-    position: absolute; /* Position absolutely to cover the section */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: auto;
-    z-index: 0; /* Place behind other elements */
-    /* Add gradient mask for fade effect */
+    z-index: 0;
     mask-image: linear-gradient(to bottom, rgba(14, 14, 14,0) 0%, rgba(14, 14, 14,1) 20%, rgba(14, 14, 14,1) 90%, rgba(0, 0, 0,0) 100%);
-   
 }
+
 :root {
     --gold: #ffb338;
     --light-shadow: #77571d;
     --dark-shadow: #3e2904;
 }
 
-/* --- Wrapper Text Styles (from your code) --- */
-/* Assuming this wrapper is part of the hero section overlay */
 .wrapper {
-    position: absolute; /* Keep relative or absolute as needed for layout */
+    position: absolute;
     width: 100%;
-    height: auto; /* Example fixed height for the hero section */
+    height: auto;
     top:10%;
     left:50% ;
-
-
 }
+
 .wrapper > div {
     position: absolute;
     background-clip: text;
     -webkit-background-clip: text;
-    color: #363833; /* This color is for the background text layer */
+    color: #363833;
     font-family: 'Teko', sans-serif;
     font-weight: 900;
     font-size: 7vw;
     grid-area: overlap;
     letter-spacing: 5px;
-    -webkit-text-stroke: 4px transparent; 
+    -webkit-text-stroke: 4px transparent;
 }
+
 div.bg {
-    /* Keep the existing background gradient for the background text layer */
     background-image: repeating-linear-gradient( 105deg,
         var(--gold) 0% ,
         var(--dark-shadow) 5%,
         var(--gold) 12%);
-    color: transparent; /* Background text layer is transparent to show the gradient */
+    color: transparent;
     filter: drop-shadow(5px 15px 15px black);
     transform: scaleY(1.05);
     transform-origin: top;
 }
-div.fg{
-    /* Change the background gradient for the foreground text layer */
-    background-image: linear-gradient(to right, var(--gold), #ff1493); /* Gold to Pink gradient */
-    color: transparent; /* Foreground text layer is transparent to show the gradient */
-    transform: scale(1); /* Keep original scale */
 
+div.fg{
+    background-image: repeating-linear-gradient( 5deg,  
+        var(--gold) 0% , 
+        var(--light-shadow) 23%, 
+        var(--gold) 31%);
+    color: #1e2127;
+    transform: scale(1);
 }
+
 .buy-collab-button {
-    position: absolute; /* Keep absolute to position freely */
-    /* Adjust size and position based on your image and desired hover area */
-    width: 150px; /* Example hover area width */
-    height: 200px; /* Example hover area height */
-    bottom: 50px; /* Example position from bottom */
-    right: 50px; /* Example position from right */
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    bottom: 50px;
+    right: 50px;
     z-index: 2;
-    overflow: visible; /* Allow image to extend beyond button bounds */
-    /* Optional: border: 1px dashed red; /* For debugging hover area */
+    overflow: visible;
 }
 
 .buy-collab-button:hover{
-    filter: drop-shadow(0 0 15px var(--gold)); /* Gold glow on hover */
+    filter: drop-shadow(0 0 15px var(--gold));
 }
-
 
 .swag-charged-description {
     background-image: linear-gradient(to top, rgba(14, 14, 14, 0.9) 20%, rgba(14, 14, 14, 0.9) 80%, rgba(14, 14, 14, 0) 100%);
-    position: absolute; /* Or absolute */
+    position: absolute;
     z-index: 1;
     font-size: 2em;
     text-align: center;
     margin-bottom: -5%;
-    padding-bottom: 120px;
-    padding-top: 120px;
+    padding:120px;
 }
 
 .drink-name-wrapper {
-    background-image: linear-gradient(to right, var(--gold), #ff1493);
+    background-image: linear-gradient(to right, #7d7245 10%, #DAA520 70%, #a77e17 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
-
-/* --- Block 2: Music Track Section --- */
+/*222222222222*/
 .music-track-section {
     width: 100%;
-    padding: 80px 20px; /* More padding */
-    /* transform and position are applied by the general section rule */
+    padding: 80px 20px;
 }
 
 .track-content {
     width: 90%;
     display: flex;
-    flex-direction: column; /* Stack on small screens */
+    flex-direction: column;
     gap: 40px;
-    margin: 0 auto; /* Center content */
-
+    margin: 0 auto;
 }
 
-@media (min-width: 768px) { /* Two columns on larger screens */
+@media (min-width: 768px) {
     .track-content {
         flex-direction: row;
         align-items: center;
     }
     .track-description-block,
     .track-cover-block {
-        flex: 1; /* Distribute space */
+        flex: 1;
     }
 }
 
@@ -213,12 +202,10 @@ div.fg{
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
-
-
-/* --- Block 3 & 4: Contest Section --- */
+/*3333333333*/
 .contest-section {
-     padding: 80px 20px;
-     width: 100%;
+    padding: 80px 20px;
+    width: 100%;
 }
 
 .contest-details {
@@ -234,7 +221,7 @@ div.fg{
 
 .contest-region-dates {
     font-weight: bold;
-    color: #00ffff; /* Neon color */
+    color: #00ffff;
     text-shadow: 0 0 1px #00ffff;
 }
 
@@ -266,7 +253,7 @@ div.fg{
 }
 
 .code-input-form input[type="text"]:focus {
-    border-color: #ff00ff; /* Change color on focus */
+    border-color: #ff00ff;
     box-shadow: 0 0 8px rgba(255, 0, 255, 0.5);
 }
 
@@ -276,7 +263,7 @@ div.fg{
     font-family: 'Teko', sans-serif;
     font-weight: 500;
     text-transform: uppercase;
-    background-color: #ff00ff; /* Neon purple */
+    background-color: #ff00ff;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -285,7 +272,7 @@ div.fg{
 }
 
 .code-input-form button:hover {
-    background-color: #0084ff; /* Neon blue on hover */
+    background-color: #0084ff;
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
@@ -303,7 +290,7 @@ div.fg{
 
 .prizes-info h3 {
     text-align: center;
-    color: var(--gold); /* Gold color */
+    color: var(--gold);
     text-shadow: 0 0 5px var(--gold);
     margin-bottom: 20px;
 }
@@ -316,19 +303,16 @@ div.fg{
 
 .merch-photo {
     display: block;
-    max-width: 300px; /* Example max width for merch photo */
+    max-width: 300px;
     height: auto;
-    margin: 20px auto; /* Center the photo */
+    margin: 20px auto;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
-
-
-/* --- Block 5: Formal Conditions Section --- */
+/*4444444444444*/
 .condition-section {
     width: 100%;
     padding: 80px 20px;
-     /* transform and position are applied by the general section rule */
 }
 
 .conditions-text {
@@ -349,35 +333,29 @@ div.fg{
 }
 
 .conditions-text strong {
-    color: #00ffff; /* Highlight key terms */
+    color: #00ffff;
 }
-
-
-/* --- Block 6: Map Section --- */
+/*55555555555555*/
 .map-section {
-     width: 100%;
-     padding: 80px 20px;
-     margin-bottom: 0; /* No margin after the last section */
-     /* transform and position are applied by the general section rule */
+    width: 100%;
+    padding: 80px 20px;
+    margin-bottom: 0;
 }
 
 .map-container {
-    width: 32%; /* Limit map width */
-    margin: 0 auto 20px auto; /* Center map and add bottom margin */
-    border: 2px solid #ff00ff; /* Neon border around map */
+    width: 32%;
+    margin: 0 auto 20px auto;
+    border: 2px solid #ff00ff;
     border-radius: 8px;
-    overflow: hidden; /* Hide iframe corners */
-
+    overflow: hidden;
 }
 
 .map-container iframe {
-    display: block; /* Remove extra space below iframe */
+    display: block;
 }
 
 .map-text {
     text-align: center;
     font-size: 1em;
     color: #ccc;
-
 }
-
