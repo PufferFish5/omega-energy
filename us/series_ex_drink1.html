@@ -53,7 +53,7 @@
                     </p>
                     </div>
                 <div class="track-cover-block">
-                    <img src="../media/album_cover_placeholder.png" alt="Exclusive Track Album Cover" class="album-cover-image">
+                    <video class="track-promo" src="../media/0001-0461.mp4" autoplay poster="../media/0001.png">
                 </div>
             </div>
         </section>
@@ -89,7 +89,11 @@
                             <li>Omega Theft Auto Collector's Editions 1500</li>
                             <li>Exclusive Omega Energy x Omega Theft Auto Merch!</li>
                         </ul>
-                        <img src="../media/merch_placeholder.png" alt="Contest Prizes Merch" class="merch-photo">
+                        <div class="merch-wrapper">
+                            <img src="../media/merch_shirt.png" alt="Contest Prizes Merch" class="merch-photo">
+                            <img src="../media/merch_shirt_front.png" alt="Contest Prizes Merch" class="merch-photo">
+                            <img src="../media/merch_shirt_back.png" alt="Contest Prizes Merch" class="merch-photo">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -127,7 +131,7 @@
             <h2 class="section-title">Find SWAG CHARGE Near You</h2>
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5432.40637120488!2d31.9203769!3d47.0950873!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c5b90030e519ad%3A0x2c71b7c370e3a583!2z0KjQutC-0LvQsCDQsdGA0LDQstC7INGB0YLQsNGA0YHQsA!5e0!3m2!1sru!2sua!4v1747414022480!5m2!1sru!2sua" 
-                width="600" 
+                width="900" 
                 height="450" 
                 style="border:0;" 
                 allowfullscreen="" 
@@ -147,20 +151,9 @@
             const codeInput = document.getElementById('promo-code');
             const statusMessage = document.getElementById('code-submission-status');
             const promoCode = codeInput.value.trim();
-
             if (promoCode) {
-                // In a real application, you would send this code to your backend
-                // using fetch() or XMLHttpRequest for validation and contest entry.
-                // For this primitive example, we just show a confirmation message.
-
                 statusMessage.textContent = 'Code submitted! Thank you for participating.';
                 statusMessage.style.color = 'green';
-                // Optionally clear the input field
-                // codeInput.value = '';
-
-                // In a real app, handle backend response:
-                // - If code is valid and unique: show success message, maybe disable the code.
-                // - If code is invalid or already used: show error message.
             } else {
                 statusMessage.textContent = 'Please enter a code.';
                 statusMessage.style.color = 'red';
