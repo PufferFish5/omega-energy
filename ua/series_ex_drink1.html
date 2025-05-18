@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="uk"> <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta charset="UTF-8">
+    <meta http-equiv="X-Ua_Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="shortcut icon" href="../media/omegaCIAlogo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tektur&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../css/ex_product_section_style.css">
-    <title>Omega Energy</title> <script src="../js/nav_bar.js" defer></script>
+    <title>Omega Energy</title> 
+    <script src="../js/nav_bar.js" defer></script>
     <script src="../js/background.js" defer></script>
     <script src="../js/footer.js" defer></script>
-        <style>
+    <style>
         .wrapper > div, .section-title {
             font-family: "Tektur", sans-serif;
         }
-    </style>
+        </style>
 </head>
 <body>
     <div id="main-nav"></div>
@@ -34,7 +34,8 @@
                 <div class="bg"> Заряд Сваги </div> <div class="fg"> Заряд Сваги </div> </div>
 
             <div class="swag-charged-description">
-                <span>Розкрий силу вулиць із <span class="drink-name-wrapper">Зарядом Сваги</span>, ексклюзивним енергетичним напоєм, що народився в результаті колаборації між Omega Energy та Omega Theft Auto. Цей лімітований смак - твоє найкраще паливо для домінування в міському ландшафті.</span> </div>
+                <span>Розкрий силу вулиць із <span class="drink-name-wrapper">Зарядом Сваги</span>, ексклюзивним енергетичним напоєм, що народився в результаті колаборації між Omega Energy та Omega Theft Auto. Цей лімітований смак - твоє найкраще паливо для домінування в міському ландшафті.</span> 
+            </div>
         </section>
 
         <div class="divider"></div>
@@ -48,7 +49,8 @@
                         Будь готовий підняти свою енергію та свій плейлист. Слухай його, коли катаєшся містом! </p>
                     </div>
                 <div class="track-cover-block">
-                    <img src="../media/album_cover_placeholder.png" alt="Обкладинка Ексклюзивного Треку" class="album-cover-image"> </div>
+                    <video class="track-promo" src="../media/0001-0461.mp4" autoplay poster="../media/0001.png">
+                </div>
             </div>
         </section>
 
@@ -71,7 +73,11 @@
                     <div class="prizes-info">
                         <h3>Виграй Ці Ексклюзивні Призи:</h3> <ul>
                             <li>Ліцензії на гру Omega Theft Auto 1500</li> <li>Колекційні Видання Omega Theft Auto 1500</li> <li>Ексклюзивний Мерч Omega Energy x Omega Theft Auto!</li> </ul>
-                        <img src="../media/merch_placeholder.png" alt="Мерч Конкурсу" class="merch-photo"> </div>
+                        <div class="merch-wrapper">
+                            <img src="../media/merch_shirt.png" alt="Contest Prizes Merch" class="merch-photo">
+                            <img src="../media/merch_shirt_front.png" alt="Contest Prizes Merch" class="merch-photo">
+                            <img src="../media/merch_shirt_back.png" alt="Contest Prizes Merch" class="merch-photo">
+                        </div>
                 </div>
             </div>
         </section>
@@ -89,7 +95,7 @@
         <section class="map-section"> <h2 class="section-title">Знайди Заряд Сваги Поруч</h2> <div class="map-container">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5432.40637120488!2d31.9203769!3d47.0950873!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c5b90030e519ad%3A0x2c71b7c370e3a583!2z0KjQutC-0LvQsCDQsdGA0LDQstC7INGB0YLQsNGA0YHQsA!5e0!3m2!1sru!2sua!4v1747414022480!5m2!1sru!2sua"
-                    width="600"
+                    width="900"
                     height="450"
                     style="border:0;"
                     allowfullscreen=""
@@ -110,20 +116,10 @@
             const promoCode = codeInput.value.trim();
 
             if (promoCode) {
-                // In a real application, you would send this code to your backend
-                // using fetch() or XMLHttpRequest for validation and contest entry.
-                // For this primitive example, we just show a confirmation message.
-
-                statusMessage.textContent = 'Код надіслано! Дякуємо за участь.'; // Перекладено
+                statusMessage.textContent = 'Код надіслано! Дякуємо за участь.';
                 statusMessage.style.color = 'green';
-                // Optionally clear the input field
-                // codeInput.value = '';
-
-                // In a real app, handle backend response:
-                // - If code is valid and unique: show success message, maybe disable the code.
-                // - If code is invalid or already used: show error message.
             } else {
-                statusMessage.textContent = 'Будь ласка, введіть код.'; // Перекладено
+                statusMessage.textContent = 'Будь ласка, введіть код.'; 
                 statusMessage.style.color = 'red';
             }
         });
